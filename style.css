@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Menandai halaman yang sedang dibuka */
+.topnav a.active {
+  background-color: #555;
+  font-weight: bold;
+}
+
+/* Pengaturan Kolom */
+.column {
+  float: left;
+  padding: 20px;
+}
+
+/* Kolom kiri dan kanan di halaman Beranda */
+.column.side {
+  width: 25%;
+}
+
+/* Kolom tengah di halaman Beranda (3 kolom) */
+.column.middle {
+  width: 50%;
+}
+
+/* Kolom biodata di halaman Anggota (karena kolom kanan dihapus sesuai sketsa) */
+.column.bio-content {
+  width: 75%;
+}
+
+/* Mengatur gambar foto profil di halaman Anggota */
+.foto-profil {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  display: block;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsif untuk layar HP */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle, .column.bio-content {
+    width: 100%;
+  }
+}
